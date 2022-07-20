@@ -1,0 +1,180 @@
+
+/*Cores que serão utilizadas no código*/
+:root {
+  --black: #4D4C59;
+  --purple: #6C63FF;
+  --light-grey: #C8C8C8;
+  --text-color: #9C9AB6;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/*---------------------Organizando o layout da página com display grid--------------------------------*/
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+
+  grid-template-rows: 130px 1fr 235px;
+  grid-template-columns: 60% 40%;
+
+}
+
+header {
+  grid-area: header;
+  background-color: white;
+
+}
+
+main {
+  grid-area: main;
+  background-color: white;
+
+}
+
+aside {
+  grid-area: aside;
+  background-color: white;
+
+
+}
+
+footer {
+  grid-area: footer;
+  background-color: white;
+}
+
+/*----------------------------Estilizando os textos, botões e etc--------------------------------*/
+.title {
+
+  font-family: 'Poppins', sans-serif;
+  color: #6C63FF;
+  font-weight: 700;
+  font-size: 36px;
+  margin-left: 160px;
+  /*margin-top: 187px;*/
+  letter-spacing: 5px;
+
+}
+
+#days {
+
+  font-family: 'Poppins', sans-serif;
+  color: #C8C8C8;
+  font-weight: 300;
+  font-size: 14px;
+  margin-left: 220px;
+}
+
+#hours {
+
+  font-family: 'Poppins', sans-serif;
+  color: #C8C8C8;
+  font-weight: 300;
+  font-size: 14px;
+  margin-left: 65px;
+}
+
+#minutes {
+
+  font-family: 'Poppins', sans-serif;
+  color: #C8C8C8;
+  font-weight: 300;
+  font-size: 14px;
+  margin-left: 50px;
+}
+
+#seconds {
+
+  font-family: 'Poppins', sans-serif;
+  color: #C8C8C8;
+  font-weight: 300;
+  font-size: 14px;
+  margin-left: 50px;
+}
+
+#countdown {
+
+  font-family: 'Poppins', sans-serif;
+  color: #4D4C59;
+  font-weight: 400;
+  font-size: 60px;
+  margin-left: 200px;  
+
+}
+
+#text {
+
+  font-family: 'Poppins', sans-serif;
+  color: #9C9AB6;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 196px;  
+
+}
+
+#signup {
+  background-color: #6C63FF;
+  width: 160px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0px;
+  margin-left: 300px;
+
+}
+
+.word {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.rockets {
+  position: absolute;
+  z-index: 4;
+}
+
+/*------------------- Estilizando a janela modal e seus componentes -------------------------*/
+
+.nameTitle, .nameEmail {
+
+  font-family: 'Poppins', sans-serif;
+  color: #9C9AB6;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.modal-title {
+
+  font-family: 'Poppins', sans-serif;
+  color: #6C63FF;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.buttonSend, .buttonClose {
+
+  background-color: #6C63FF;
+  /*width: 160px;
+  height: 40px;*/
+  border-radius: 5px;
+  border: 0px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;  
+}
+
+.nameInput, .emailInput {
+  
+  width: 250px;
+  
+}

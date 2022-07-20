@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="stylecountdown.css">
+    <!--os plugins do bootstrap podem ser incluídos individualmente usando o arquivo "modal.js" ou todos de uma vez usando "bootstrap.js" ou "bootstrap.min.js"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--importando a fonte usado para estilizar como link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <script src="countdownjava.js"></script>
+    <!--organização em subdivições e divs para aplicar o layout grid-->
+    <header>
+        <div>
+            <img src="top-image.svg" alt="">
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <h1 class="title">READY TO LAUNCH IN...</h1>
+            <div class="titleCountdown">
+                <span id="days">Dias</span>
+                <span id="hours">Horas</span>
+                <span id="minutes">Minutos</span>
+                <span id="seconds">Segundos</span>
+
+            </div>
+            <p id="countdown"></p>
+            <p id="text">Inscreva-se para saber mais sobre a lançamento</p>
+            <!--Usando o plugin modal do bootstrap-->
+            <button id="signup" type="submit" class="word" data-toggle="modal"
+                data-target="#modalForms">Inscreva-se</button>
+            <!--é adicionado um botão para quando houver o click, abrir o modal
+                data-toggle="modal" abre a janela do tipo modal definido (liga o elemento ao tipo correspondente)
+                data-target="#modalForms" aponta para/o id do modal-->
+        </div>
+
+        <!--Modal-->
+        <div id="modalForms" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!--o div pai deve ter o id igual ao do valor do atributo data-target
+                a class modal identifica o conteúdo da div como modal e traz o foco pra ele
+                o fade adiciona um efeito de transição que faz o fade in e out do modal
+                o atributo role="dialog" melhora a acessibilidade para pessoas que usam leitores de tela
+                class="modal-dialog" define a largura e a margem apropriadas do modal
+                se o class="modal dialog modal-lg" apresenta um modal grande, se for class="modal dialog modal-sm" apresenta um modal pequeno-->
+
+                <!--Modal content-->
+                <div class="modal-content">
+                    <!--class="modal-content" estiliza o modal(borda, cor de fundo, etc). Dentro dele, adicione o cabeçalho (header), o corpo (body) e o rodapé do modal (footer)-->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Formulário de Inscrição</h4>
+                        <!--class="modal-header" é para definir o cabeçalho do modal
+                            o button dentro do modal tem um atibuto data-dismiss="modal" de fechar o modal
+                            a class="close" serve para estilizar o botão fechar
+                            a class="modal-title" estiliza o título do cabeçalho com uma altura de linha adequada-->
+                    </div>
+                    <div class="modal-body">
+                        <!--class="modal-body" estiliza o corpo do modal
+                            pode ser add qualquer marcação HTML dentro-->
+                        <form action="" id="submitForms">
+                            <div class="form-group">
+
+                                <div>
+                                    <label for="name" class="nameTitle">Nome:</label>
+                                    <input type="text" id="name" class="nameInput" placeholder="Digite seu nome aqui"
+                                        name="nameRegistered" required>
+                                </div>
+
+                                <br>
+
+                                <div>
+                                    <label for="email" class="nameEmail">E-mail:</label>
+                                    <input type="email" id="email" class="emailInput" placeholder="nome@seudominio.com"
+                                        name="emailRegistered" required>
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <!--class="modal-footer" definir o estilo do rodapé
+                            área alinhada a direita
+                            possui dois buttons para enviar e fechar o modal-->
+                        <button type="submit" class="buttonSend" form="submitForms">Enviar</button>
+                        <!--type="submit" para que o botão faça o envio das infos do forms
+                            form="submitForms" é para vincular o button ao forms-->
+                        <button type="button" class="buttonClose" data-dismiss="modal">Fechar</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <aside>
+        <div>
+            <img class="rockets" src="rocket.svg" alt="" width="500px">
+        </div>
+    </aside>
+
+    <footer>
+        <div>
+            <img src="bottom-image.svg" alt="" width="1366px">
+        </div>
+    </footer>
+
+</body>
+
+</html>

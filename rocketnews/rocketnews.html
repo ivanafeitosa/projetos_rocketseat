@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocketnews</title>
+    <link rel="stylesheet" href="stylerocketnews.css">
+    
+</head>
+
+<body>
+    <script src="rocketnewsjava.js"></script>
+    <!--Para usar o grid precisa criar as subdivisões no código de header, main, aside e footer com tudo dentro de divs-->
+    <header>
+        <div>
+            <img src="logo.svg" alt="logo rocketnews" width="300px" style="margin-top: 50px; margin-left: 30px;">
+
+        </div>
+
+    </header>
+
+    <main>
+        <div>
+            <h1>atualize ideias e informações em 5 minutos</h1><br>
+            <h2>tudo que você precisa saber para começar seu dia bem e informado</h2><br>
+            <p>notícias sobre o universo Rocketseat, e tudo o que precisa para começar o dia melhor.</p>
+            <p>perfeito para se preparar para codar <img src="xicara-de-cafe.png" alt="icone" width="15px"
+                    height="15px"></p>
+        </div>
+        <div>
+            <br>
+            <br>
+            <form action="" id="news">
+                <label for="email">Insira seu e-mail:</label>
+                <br>
+                <input type="email" id="email" class="taginput" placeholder="  oi@rocketseat.com"
+                    title="Insira seu email" name="email" onblur="checkEmail();"> <!--o atributo onblur executa uma função quando você sai do input-->
+                <!--checkEmail() é uma função para verificar se o email digitado no campo input é válido-->
+                <button type="submit" form="news" class="send" style="background-color: #8257e5; border: 0px;">
+                    <img src="send.svg" alt="Enviar" height="44px" width="44px">
+                </button>
+            </form>
+
+        </div>
+        <div class="details box">
+            <!--só para criar o detalhe verde (retangulo na vertical) no início do campo input-->
+
+        </div>
+
+        <div class="arrow">
+            <span>
+                <a href="#" id="read">
+                    deixe-me ler primeiro
+                    <span>
+                        <img class="imagearrow" src="arrow-right.svg" alt="seta" width="15px" height="15px">
+                    </span></a>
+            </span>
+
+        </div>
+
+    </main>
+
+    <aside>
+        <div></div>
+    </aside>
+
+    <footer>
+        <div></div>
+    </footer>
+
+</body>
+
+</html>

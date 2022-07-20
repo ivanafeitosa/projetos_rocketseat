@@ -1,0 +1,71 @@
+/*:root {
+    --body-bg-color: #FAF7FD;
+    --purple: #BB99DD;
+  }
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;   
+}
+
+#imagem {
+    width: 200px;
+    margin: 0 auto;       
+}
+
+/*config colocar a imagem em formato de círculo*/
+.circle-image {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden; /*recorta a imagem*/
+    width: 200px;
+    height: 200px;    
+    border: 3px solid #BB99DD; /*borda ao redor do círculo*/
+  }
+  .circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*redimensiona a imagem cortada para proporções corretas para o preenchimento*/   
+  }
+
+#legenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    font-family: 'Poppins';
+    font-weight: 300; /*largura da letra da fonte*/
+    color: #BB99DD; 
+    }
+
+#link1, #link2, #link3, #link4 {
+    width: 350px;
+    height: 30px;
+    border: 2px solid #BB99DD;
+    border-radius: 2px; /*deixar os cantos do box arredondados*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; /*largura da letra da fonte*/
+    color: #BB99DD;
+     
+    /*margin: 10px 560px;
+    padding: 5px 10px;*/
+
+}  
+
+a {
+    text-decoration: none; /*text-decoration: none; é para retirar o sublinhado do link*/ 
+    color: #BB99DD;
+}
+
+#icones {
+    width: 300px;
+    margin: 0 auto;
+    padding: 0 30px;
+    
+}

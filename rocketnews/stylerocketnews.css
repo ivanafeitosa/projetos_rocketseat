@@ -1,0 +1,152 @@
+
+/*Importando a fonte a ser utilizada*/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Work+Sans:wght@700&display=swap');
+
+
+/*Cores a serem utilizadas no código como um todo*/
+:root {
+    --body-bg-color: #121214;
+    --text-color: #E1E1E6;
+    --title-color: #04D361;
+    --form-color: #A8A8A8;
+    --bg-button-color: #8257e5;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*---------------Usando o display grid para organizar o layout da página----------------------*/
+body {
+    height: 100vh;
+    /*definindo a altura como o tamanho da tela toda*/
+    display: grid;
+    grid-template-areas:
+        "header aside"
+        "main aside"
+        "footer aside";
+
+    grid-template-rows: 150px 1fr 20px;
+    /*tamanho das linhas*/
+    grid-template-columns: 50% 50%;
+    /*tamanho das colunas*/
+
+}
+
+header {
+    grid-area: header;
+    background-color: #121214;
+}
+
+main {
+    grid-area: main;
+    background-color: #121214;
+}
+
+aside {
+    grid-area: aside;
+    background-image: url(read_news.jpg);
+    /*colocando uma imagem no background dessa área*/
+    background-size: cover;
+    /*imagem expandida no background*/
+    background-position: right;
+    /*posicionando para a direita*/
+
+}
+
+footer {
+    grid-area: footer;
+    background-color: #121214;
+}
+
+/*--------------------------Estilizando textos, botões e coisas específicas da página------------------------*/
+
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    color: #04D361;
+    font-weight: 700;
+    /*estilo: bold, regular, extrabold*/
+    font-size: 24px;
+    margin-left: 36px;
+}
+
+h2 {
+    font-family: 'Spartan', sans-serif;
+    color: #E1E1E6;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 36px;
+}
+
+label {
+    font-family: 'Spartan', sans-serif;
+    color: #A8A8A8;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 36px;
+
+}
+
+p {
+    font-family: 'Spartan', sans-serif;
+    color: #E1E1E6;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 36px;
+}
+
+#read {
+    margin-left: 36px;
+    font-family: 'Spartan', sans-serif;
+    color: #8257e5;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+a,
+span {
+    text-decoration: none;
+    /*retirando o sublinhado do link*/
+}
+
+#email {
+    height: 48px;
+    width: 745px;
+    margin-left: 41px;
+    border: 0px;
+    /*retirando a borda do botão*/
+}
+
+.box {
+    width: 5px;
+    height: 48px;
+}
+
+.details {
+    background-color: #04D361;
+    position: absolute;
+    /*posicionando em camadas diferentes da camada principal (posição absoluta na tela)*/
+    margin-left: 36px;
+    z-index: 2;
+    /*camada que o objeto ficará*/
+}
+
+.taginput {
+    position: absolute;
+    z-index: 1;
+}
+
+.send {
+    position: absolute;
+    margin-left: 786px;
+    z-index: 3;
+}
+
+.arrow {
+    display: flex;
+    margin-left: 0px;
+    margin-top: 90px;    
+}
