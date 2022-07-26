@@ -25,9 +25,11 @@ body {
     padding: 0;
     color: #837E9F;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;  
 }
+
 
 .portfolio-wrapper {
     display: flex;
@@ -194,8 +196,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;    
-    border: 1px solid red;
+    width: 100%;   
+}
+
+.item-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
 }
 
 .post {
@@ -233,235 +248,52 @@ body {
     margin-top: 0.8rem;
 }
 
-.author {
+.portfolio-author {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 100%;
-    min-height: 700px;    
-}
-
-
-/*
-body>aside {
-    grid-area: aside;    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-
-}
-
-body>main {
-    grid-area: main;    
-    display: flex;
-    flex-direction: column;      
-    
-}
-
-body>footer {
-    grid-area: footer;    
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 12px;
-}
-
-body > footer > p {
-    margin-bottom: 10px;
-} */
-
-/*---------------------------------------Estilizando o aside---------------------------------------------------*/
-/*
-.profileInfos,
-.infoList {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #302F3D;
-    box-shadow: 1px 1px 3px black; borda nas sombras
-    border-radius: 20px;
-    width: 290px;
-}
-
-.profileInfos {
-    height: 280px;
-}
-
-.infoList {
-    height: 260px;
-}
-
-.infoList ul li {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 12px;
-
-}
-
-.infoList ul li a {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    color: #837E9F;
-}
-
-.infoList ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.hardSkills {
-    background-color: #302F3D;
-    box-shadow: 1px 1px 3px black;
-    border-radius: 20px;
-    width: 290px;
-    height: 150px;
-
-}
-
-.hardSkills h3:nth-child(1),
-.experiences h3:nth-child(1),
-.academic h3:nth-child(1) {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 10px 0 10px 30px;
-}
-
-.hardSkills ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.hardSkills ul li {
-    display: flex;
-    background-color: #CB92B1;
-    border-radius: 20px;
-    width: 80px;
-    height: 20px;
-    font-size: 10px;
-    justify-content: center;
-    align-items: center;
-    color: #22212C;
-    font-family: 'Merriweather Sans', sans-serif;
-    font-weight: 700;
-}
-
-.experiences ul,
-.academic ul {
-    list-style: disc;
-}
-
-.experiences,
-.academic {
-    background-color: #302F3D;
-    box-shadow: 1px 1px 3px black;
-    border-radius: 20px;
-    width: 290px;
-}
-
-.experiences ul,
-.academic ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    margin: 10px 0 10px 70px;
-}
-
-.experiences ul p,
-.academic ul p {
-    font-size: 12px;
-}
-
-.experiencesTitles,
-.academicTitles {    
-    font-weight: 700;
-}
-
-body aside h3 {
-    font-weight: 700;
-}*/
-
-/*------------------------------------------Estilizando o main-------------------------------------------------*/
-/*
-.projectSection .myprojects, .postSection .recentposts {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 1px 1px 3px black;
-    padding: 20px;
-    background-color: #302F3D;
-    border-radius: 20px;
-}
-
-.projectSection div:nth-child(2) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.projectSection div article {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 495px;
-    background-color: #302F3D;
-    border-radius: 20px;
-    box-shadow: 1px 1px 3px black;
-    padding: 30px;
+    min-height: 2rem;
+    font-size: 14px;
 }
 
-body  main  section {
-    margin: 20px 20px 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/*mobile*/
+
+@media(max-width: 900px){
+    .portfolio-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-main {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-project {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+    }
+
+    .portfolio-project {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .project {
+        width: 65%;
+    }
+
+    .project-section {        
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .project-section:nth-child(2) {
+        display: none;
+    }
+
+
 }
-
-.projectSection header, .projectSection footer {
-    display: flex;
-    align-items: center;
-    gap: 15px;    
-}
-
-.projectSection footer a, .projectSection footer p {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-}
-
-
-
-.postSection article {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    box-shadow: 1px 1px 3px black;
-    background-color: #302F3D;
-    border-radius: 20px;
-    padding: 20px;    
-}
-
-.postSection ul {
-    display: flex;
-    gap: 30px;
-    font-size: 12px;   
-}
-
-.postSection main {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-size: 15px;    
-}*/
